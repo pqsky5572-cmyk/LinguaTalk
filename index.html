@@ -1,38 +1,168 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Chatbox</title>
+
+    <title>Linguatalk - AI Conversation Partner</title>
+
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: Arial, sans-serif;
-            background: #f4f6fb;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background: #FFF9E8;
+            color: #403653;
             min-height: 100vh;
         }
-        .container {
-            text-align: center;
-            padding: 30px;
+
+        /* THANH ĐẦU TRANG */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 7%;
+            background: #DCCBFF;
+            box-shadow: 0 3px 15px rgba(120, 90, 160, 0.08);
         }
-        h1 { color: #222; }
-        p { color: #666; }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #7050A8;
+        }
+
+        .tagline {
+            font-size: 14px;
+            color: #7050A8;
+        }
+
+        /* PHẦN GIỚI THIỆU */
+        .hero {
+            text-align: center;
+            padding: 45px 20px 25px;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            color: #7050A8;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: #776B86;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* KHUNG CHAT */
+        .chat-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 10px auto 45px;
+            background: white;
+            padding: 12px;
+            border: 2px solid #E6D9FF;
+            border-radius: 22px;
+            box-shadow: 0 8px 30px rgba(112, 80, 168, 0.12);
+            overflow: hidden;
+        }
+
+        iframe {
+            display: block;
+            width: 100%;
+            height: 700px;
+            border: none;
+            border-radius: 14px;
+        }
+
+        /* CHÂN TRANG */
+        footer {
+            text-align: center;
+            padding: 22px;
+            color: #887C99;
+            font-size: 13px;
+        }
+
+        /* ĐIỆN THOẠI */
+        @media (max-width: 600px) {
+            .navbar {
+                padding: 16px 20px;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .logo {
+                font-size: 23px;
+            }
+
+            .hero {
+                padding: 35px 15px 20px;
+            }
+
+            .hero h1 {
+                font-size: 25px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .chat-container {
+                width: 96%;
+                padding: 6px;
+                border-radius: 16px;
+            }
+
+            iframe {
+                height: 650px;
+            }
+        }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Chào mừng đến với Chatbox</h1>
-        <p>Trợ lý trò chuyện trực tuyến của bạn.</p>
-    </div>
 
-    <iframe
- src="https://udify.app/chatbot/3vNdUnfbcik0MJ6H"
- style="width: 100%; height: 100%; min-height: 700px"
- frameborder="0"
- allow="microphone;clipboard-write">
-</iframe>
+<body>
+
+    <!-- LOGO VÀ THANH ĐẦU TRANG -->
+    <header class="navbar">
+        <div class="logo">
+            💬 Linguatalk
+        </div>
+
+        <div class="tagline">
+            Your AI Conversation Partner ✨
+        </div>
+    </header>
+
+    <!-- GIỚI THIỆU -->
+    <section class="hero">
+        <h1>Welcome to Linguatalk! 💜</h1>
+
+        <p>
+            Your friendly AI companion.<br>
+            Let's talk, learn and improve together!
+        </p>
+    </section>
+
+    <!-- CHATBOX -->
+    <main class="chat-container">
+
+        <iframe
+            src="https://udify.app/chatbot/3vNdUnfbcik0MJ6H"
+            allow="microphone;clipboard-write">
+        </iframe>
+
+    </main>
+
+    <!-- CHÂN TRANG -->
+    <footer>
+        © 2026 Linguatalk. Made with 💛 and 💜
+    </footer>
+
 </body>
 </html>
